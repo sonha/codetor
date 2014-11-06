@@ -18,22 +18,10 @@
     float: left;
 }
 
-body {
-    overflow: hidden;
-}
 #editor {
     width: 970px;
-    height: 850px
+    height: 754px
 }
-
-/*#editor {*/
-    /*margin: 0;*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*bottom: 0;*/
-    /*left: 0;*/
-    /*right: 0;*/
-/*}*/
 
 .textarea-hidden {
     display: none;
@@ -60,8 +48,7 @@ body {
     background-color: #e5eecc;
     position: absolute;
     height: auto;
-    /*top: 100px;*/
-    top: 25px;
+    top: 100px;
     bottom: 20px;
     width: 100%;
     border-top: solid #c3c3c3 1px;

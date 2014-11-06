@@ -20,7 +20,7 @@
         name: "Toggle Fullscreen",
         bindKey: "F11",
         exec: function(editor) {
-    dom.toggleCssClass(document.body, "fullScreen")
+            dom.toggleCssClass(document.body, "fullScreen")
             dom.toggleCssClass(editor.container, "fullScreen")
             editor.resize()
         }
@@ -29,11 +29,11 @@
         name: "Submit",
         bindKey: "F9",
         exec: function(editor) {
-    jQuery('#submit-form').trigger('click');
-}
+            jQuery('#submit-form').trigger('click');
+        }
     })
     var editor = ace.edit("editor");
-    editor.setFontSize('15px');
+    editor.setFontSize('13px');
     editor.setTheme("ace/theme/twilight");
     editor.session.setMode("ace/mode/php");
     editor.setOption("enableEmmet", true);
@@ -67,4 +67,4 @@
     jQuery("#use-angular").click(function() {
         editor.insert(angular.outerHTML);
     })
-    </script>
+</script>
