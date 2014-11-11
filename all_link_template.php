@@ -5,7 +5,7 @@
  * Date: 04/11/2014
  * Time: 10:13 SA
  */ ?>
-<div class="headerText">Result:</div>
+<div class="headerText">Result:<?php echo 'demo/'.$txt_filename.'.php';?></div>
 <div class="headerText" style="right:10px;">
     <a style="color:#617f10" href='index.php?source=php'>PHP</a> |
     <a href="admin.php">Admin</a> |
