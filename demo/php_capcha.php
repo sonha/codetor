@@ -57,7 +57,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 	<form action="" method="POST">
-		<h2>CAPTCHA - HOCWEB.COM.VN</h2>
+		<h2>CAPTCHA - Codeto.com.vn</h2>
 		<p>Please enter the captcha:</p>
 		<input type="text" name="input"><img src="demo/php_capcha_generate.php" title="" alt="" /><br />
 		<input type="submit" name="submit" value="Send">
