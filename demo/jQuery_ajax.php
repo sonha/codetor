@@ -10,10 +10,10 @@
   url : "http://api.flickr.com/services/feeds/photos_public.gne?tags=resig&tagmode=all&format=json&jsoncallback=?",
   dataType : "json",
   success : function(data) {
-  console.log(data);
+  //console.log(data);
   $.each(data.items, function(i, item){
-  console.log(i);
-  console.log(item);
+  //console.log(i);
+  //console.log(item);
   $( "<img />" ).attr( {title: function() {
   return i + " - photo by Kelly Clark";
 }, src: item.media.m}).appendTo("#sonha");
