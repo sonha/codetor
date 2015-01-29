@@ -92,9 +92,17 @@ if(isset($_POST['register'])) {
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+
+        table {
+            border: 1px solid black;
+        }
+
+    </style>
 </head>
 <body>
 <h1>User Register Form</h1>
+<hr>
 <form action="" method="POST">
 <table>
     <tr>
