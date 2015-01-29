@@ -19,6 +19,7 @@ if(isset($_POST['register'])) {
 	$gender = (isset($_POST['gender'])) ? $_POST['gender'] : '';
 	$university = (isset($_POST['university'])) ? $_POST['university'] : '';
 	$course = (isset($_POST['course'])) ? $_POST['course'] : array();
+    $note = (isset($_POST['note'])) ? $_POST['note'] : '';
 	$day = (isset($_POST['day'])) ? $_POST['day'] : '';
 	$month = (isset($_POST['month'])) ? $_POST['month'] : '';
 	$year = (isset($_POST['year'])) ? $_POST['year'] : '';
@@ -38,8 +39,11 @@ if(isset($_POST['register'])) {
     }
 	if($university == '') {
 		$error_message['university'] = '<p style="color: red;">university is required</p>';
-	} 
-	if(empty($course)) {
+	}
+    if($note == '') {
+        $error_message['note'] = '<p style="color: red;">note is required</p>';
+    }
+    if(empty($course)) {
 		$error_message['course'] = '<p style="color: red;">course is required</p>';
 	} else {
 		$course_name = implode(',',$course);
@@ -172,6 +176,13 @@ if(isset($_POST['register'])) {
             <?php } ?>
         </td>
 		<td><?php echo (isset($error_message['course'])) ? $error_message['course'] : '';?></td>
+    </tr>
+    <tr>
+        <td>Note</td>
+        <td>
+            <textarea name="note" id="" cols="40" rows="10"><?php echo (isset($note)) ? $note : '';?></textarea>
+        </td>
+        <td><?php echo (isset($error_message['note'])) ? $error_message['note'] : '';?></td>
     </tr>
 	<tr>
 		<td><input type="submit" name="register" value="Check"/></td>
