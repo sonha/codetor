@@ -88,6 +88,7 @@ if(isset($_POST['register'])) {
 	}
 }
 ?>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -122,7 +123,10 @@ if(isset($_POST['register'])) {
     </tr>
     <tr>
         <td>Email</td>
-        <td><input type="text" name="email" value="<?php echo (isset($email)) ? $email : '';?>"/></td>
+<!--        Khi load một trang web, con trỏ tự động nằm tại thẻ <input> nào có thuộc tính autofocus.-->
+<!--        lưu ý : đoạn này cũng có thể validate bằng type="email"-->
+<!--        Xem thêm tại link : http://www.w3schools.com/html/html_form_input_types.asp-->
+        <td><input type="text" name="email" value="<?php echo (isset($email)) ? $email : '';?>" autofocus="autofocus"/></td>
 		<td><?php echo (isset($error_message['email'])) ? $error_message['email'] : '';?></td>
     </tr>
     <tr>
