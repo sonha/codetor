@@ -96,13 +96,24 @@ if(isset($_POST['register'])) {
     <style>
 
         table {
-            border: 1px solid black;
+            border: 1px solid black;    
+            padding: 2px 2px; 
+            border-radius: 7px;
+        }
+        .info {
+            border: 2px solid #a1a1a1;
+            padding: 2px 2px; 
+            background: #dddddd;
+            width: 300px;
+            border-radius: 25px;
         }
 
     </style>
 </head>
 <body>
+<div class="info">
 <h1>User Register Form</h1>
+</div>
 <hr>
 <form action="" method="POST">
 <table>
@@ -197,6 +208,7 @@ if(isset($_POST['register'])) {
         <td><?php echo (isset($error_message['note'])) ? $error_message['note'] : '';?></td>
     </tr>
 	<tr>
+		<td></td>
 		<td><input type="submit" name="register" value="Check"/></td>
 	</tr>
 </table>
