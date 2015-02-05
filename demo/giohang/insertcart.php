@@ -23,5 +23,5 @@ if(!isset($_SESSION['cart']) || $_SESSION['cart']== null) {
         $_SESSION['cart'][$idProduct] = $newProduct[$idProduct];
     }
 }
-header("location:index.php");
+header("location:viewcart.php");
 ?>

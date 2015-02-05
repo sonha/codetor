@@ -37,13 +37,13 @@ session_start();
 <p>Dang co <a href="viewcart.php"><?php echo $total; ?></a> san pham trong gio hang</p>
 <?php
 require_once 'listProduct.php';
-echo '<ul>';
-foreach($product as $listProduct) {
-    echo "<li>
-            <h3>".$listProduct['name']."</h3>
-            <p>Giá bán : ".number_format($listProduct['price'])."</p>
-            <p><a href='insertcart.php?id=".$listProduct['id']."'>Mua ngay</a></p>
-            </li>";
-}
-echo '</ul>';
 ?>
+<ul>
+	<?php foreach($product as $listProduct) { ?>
+    <li>
+            <h3><?php echo $listProduct['name'];?></h3>
+            <p>Giá bán : <?php echo number_format($listProduct['price']);?></p>
+            <p><a href='insertcart.php?id=<?php echo $listProduct['id'];?>'>Mua ngay</a></p>
+    </li>
+	<?php } ?>
+</ul>

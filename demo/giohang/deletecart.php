@@ -1,9 +1,10 @@
 <?php
 session_start();
 $id = $_GET['id'];
-echo '<pre>';
-print_r($_SESSION['cart']);
-echo $id;
-unset($_SESSION['cart'][$id]);
+if($id == 0) {
+	unset($_SESSION['cart']);
+} else {
+	unset($_SESSION['cart'][$id]);
+}
 header('location:viewcart.php');
 ?>

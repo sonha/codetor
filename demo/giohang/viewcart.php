@@ -1,35 +1,40 @@
 <?php
     session_start();
+	$total = 0;
 ?>
 <meta charset="utf-8"/>
-<h3>Thong tin gio hang</h3>
-<?php
-if(isset($_SESSION['cart']) && $_SESSION['cart']!= null) {
-    echo "<form action='updatecart.php' method='POST'>";
-    echo "<table border='1' width='600'>";
-    echo "<tr>";
-    echo "<td>Ten san pham</td>";
-    echo "<td>Gia san pham</td>";
-    echo "<td>So luong</td>";
-    echo "<td>Thanh tien</td>";
-    echo "<td>Xoa</td>";
-    echo "</tr>";
-
-    foreach($_SESSION['cart'] as $list) {
-        echo "<tr>";
-        echo "<td>".$list['name']."</td>";
-        echo "<td>".$list['price']."</td>";
-        echo "<td><input type='text' name='qty[".$list['id']."]' value='".$list['qty']."'/></td>";
-        echo "<td>".($list['price']* $list['qty'])."</td>";
-        echo "<td><a href='deletecart.php?id=".$list['id']."'>Xoa</a></td>";
-        echo "</tr>";
-    }
-    echo "</table>
-          <p align='right' style='width: 600px'>
-           <input type='submit' value='Update' name='btnUpdate'/>
-           </p>";
-    echo "</form>";
-} else {
-    echo 'Chua co san pham nao';
-}
-?>
+<h3>Thong tin gio hang || <a href='index.php'>Quay lại mua tiếp</a></h3>
+<?php if(isset($_SESSION['cart']) && $_SESSION['cart']!= null) { ?>
+    <form action='updatecart.php' method='POST'>
+    <table border='1' width='600'>
+    <tr>
+    <td>Ten san pham</td>
+    <td>Gia san pham</td>
+    <td>So luong</td>
+    <td>Thanh tien</td>
+    <td>Xoa</td>
+    </tr>
+	<?php foreach($_SESSION['cart'] as $list) { ?>
+		<?php
+			$sotien = $list['price']* $list['qty'];
+			$total += $sotien;
+		?>
+        <tr>
+        <td><?php echo $list['name'];?></td>
+        <td><?php echo $list['price'];?></td>
+        <td><input type='text' name='qty[<?php echo $list['id'];?>]' value='<?php echo $list['qty'];?>'/></td>
+        <td><?php echo number_format($sotien) ;?></td>
+        <td><a href='deletecart.php?id=<?php echo $list['id'];?>'>Xoa</a></td>
+        </tr>
+    <?php } ?>
+	<tr>
+	</tr>
+    </table>
+	Tổng tiền : <?php echo number_format($total);?>
+    <p align='right' style='width: 600px'>
+    <input type='submit' value='Update' name='btnUpdate'/>
+    </p>
+    </form>
+<?php } else { ?>
+Không có sản phẩm nào
+<?php } ?>
