@@ -27,6 +27,10 @@ include('header_template.php');
     if(empty($_POST)) {
         if(isset($_GET['source']) && $_GET['source'] == 'php') {
             $source = file_get_contents('php_template.php');
+        } elseif(isset($_GET['source']) && $_GET['source'] == 'bootstrap') {
+            $source = file_get_contents('bootstrap_template.php');
+        } elseif(isset($_GET['source']) && $_GET['source'] == 'angular') {
+            $source = file_get_contents('angular_template.php');
         } else {
             $source = file_get_contents('html_template.php');
         }

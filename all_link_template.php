@@ -8,6 +8,8 @@
 <div class="headerText">Result:<?php echo 'demo/'.$txt_filename.'.php';?></div>
 <div class="headerText" style="right:10px;">
     <a style="color:#617f10" href='index.php?source=php'>PHP</a> |
+    <a style="color:#617f10" href='index.php?source=angular'>Angular</a> |
+    <a style="color:#617f10" href='index.php?source=bootstrap'>Bootstrap</a> |
     <a href="admin.php">Admin</a> |
     <a href="index.php">Home</a> |
     <a href='./dates.php'>Dates</a> |
