@@ -36,7 +36,6 @@ include('header_template.php');
     ?>
     <div id="sourcecode">
         <form method='post'>
-<!--                <input type='submit'  id='submit-form' value="Submit»">-->
             <button type="submit" id='submit-form' class="btn btn-success">Let's Run</button>
             <pre id='editor' ><?php echo htmlspecialchars($source)?></pre><br/>
             <textarea name='source' class='textarea-hidden' ></textarea>
