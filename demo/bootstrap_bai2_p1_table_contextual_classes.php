@@ -10,13 +10,15 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 </head>
 <body>
-<!--
-Sự khác nhau giữa 2 kiểu container : container-fluid và container
--->
+<blockquote>
+  <p>Thêm màu(style) cho các thẻ tr, th, td</p>
+  <p>dặt các class active, info, danfer,success, vào các thẻ th, tr, td tương ứng</p>
+  <footer>Kiến thức cơ bản <cite title="Source Title">Table Bootsrap</cite></footer>
+</blockquote>
 <div class="container-fluid">
 Tables
 <table class="table table-hover">
-      <caption>Optional table caption.</caption>
+      <caption>Đây là caption của bảng</caption>
       <thead>
         <tr class="active">
           <th>#</th>

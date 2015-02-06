@@ -10,9 +10,11 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 </head>
 <body>
-<!--
-Sự khác nhau giữa 2 kiểu container : container-fluid và container
--->
+<blockquote>
+  <p>Làm việc với table chỉ cần thêm class "table" vào bảng, Boostrap sẽ TỰ ĐỘNG tạo style cho bảng</p>
+  <p>Muốn thêm border => thêm class "table-bordered"</p>
+  <footer>Kiến thức cơ bản <cite title="Source Title">Table Bootsrap</cite></footer>
+</blockquote>
 <div class="container-fluid">
 Tables
 <table class="table table-bordered">

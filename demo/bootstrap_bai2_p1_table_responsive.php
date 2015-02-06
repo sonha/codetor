@@ -10,9 +10,11 @@
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 </head>
 <body>
-<!--
-Sự khác nhau giữa 2 kiểu container : container-fluid và container
--->
+<blockquote>
+  <p>Table responsive </p>
+  <p>Đặt class table-responsive</p>
+  <footer>Kiến thức cơ bản <cite title="Source Title">Table Bootsrap</cite></footer>
+</blockquote>
 <div class="container-fluid">
 Tables
 <div class="table-responsive">
