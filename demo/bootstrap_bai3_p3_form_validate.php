@@ -1,3 +1,9 @@
+<?php 
+if(isset($_POST['btnSubmit'])) {
+    
+    var_dump($_POST['btnSubmit']);
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +18,7 @@
     <link rel="stylesheet" href="<?php echo $baseUrl;?>js/docs.min.js">
 </head>
 <body>
-<form class="form-horizontal">
+<form class="form-horizontal" action="" method="POST">
   <div class="form-group has-success">
   <label class="control-label" for="inputSuccess1">Input with success</label>
   <input type="text" class="form-control" id="inputSuccess1">
@@ -49,6 +55,7 @@
     </label>
   </div>
 </div>
+<input class="btn btn-default" type="submit" value="Submit"  name="btnSubmit">
 </form>
 </body>
 </html>
