@@ -121,7 +121,7 @@ $total = 0;
             <?php } else { ?>
                 <div class="alert alert-warning alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <strong>Thông báo!</strong> Không có sản phẩm nào.
+                    <strong>Thông báo!</strong> Không có sản phẩm nào trong giỏ hàng.
                     <a href="index.php" class="btn btn-info active" role="button">Mua tiếp</a>
                 </div>
             <?php } ?>
