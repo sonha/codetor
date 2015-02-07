@@ -152,7 +152,7 @@ require_once 'listProduct.php';
                                 <p><?php echo $listProduct['description'];?></p>
                             </div>
                             <p style="padding-left: 100px;">
-                                <button type="button" class="btn btn-success">View</button>
+                                <button type="button" class="btn btn-success"><a href='item.php'>View</a></button>
                                 <button type="button" class="btn btn-danger"><a href='insertcart.php?id=<?php echo $listProduct['id'];?>'>Mua ngay</a></button>
                             </p>
                             <div class="ratings">
