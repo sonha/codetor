@@ -1,7 +1,8 @@
 <?php
 session_start();
+require_once '_template_session.php';
 require_once 'listProduct.php';
-$total = 0;
+$totalCash = 0;
 ?>
 <meta charset="utf-8"/>
 <!DOCTYPE html>
@@ -35,8 +36,8 @@ $total = 0;
                             </thead>
                             <tbody>
                             <?php foreach ($_SESSION['cart'] as $list) { ?>
-                                <?php $sotien = $list['price'] * $list['qty'];
-                                $total += $sotien;
+                                <?php $itemCash = $list['price'] * $list['qty'];
+                                $totalCash += $itemCash;
                                 ?>
                                 <tr>
                                     <td><?php echo $list['id']; ?></td>
@@ -49,7 +50,7 @@ $total = 0;
                                             </div>
                                         </div>
                                     </td>
-                                    <td><?php echo number_format($sotien); ?></td>
+                                    <td><?php echo number_format($itemCash); ?></td>
                                     <td><a class="btn btn-danger" href="deletecart.php?id=<?php echo $list['id']; ?>">
                                             <i class="icon-trash icon-large"></i> Delete
                                         </a>
@@ -61,7 +62,7 @@ $total = 0;
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td><?php echo number_format($total); ?></td>
+                                    <td><?php echo number_format($totalCash); ?></td>
                                     <td></td>
                                 </tr>
                             </tbody>

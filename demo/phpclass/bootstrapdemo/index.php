@@ -2,15 +2,9 @@
 <?php
 session_start();
 ?>
+
 <?php
-    $totalSanpham = 0;
-    $tongSoTien = 0;
-    if(isset($_SESSION['cart']) && $_SESSION['cart'] != null) {
-        foreach($_SESSION['cart'] as $list) {
-            $totalSanpham += $list['qty'];
-            $tongSoTien   += $list['price'] * $list['qty'];
-        }
-    }
+require_once '_template_session.php';
 require_once 'listProduct.php';
 ?>
 <!DOCTYPE html>

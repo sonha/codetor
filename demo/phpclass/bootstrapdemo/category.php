@@ -3,6 +3,7 @@
 session_start();
 ?>
 <?php
+    require_once '_template_session.php';
     require_once 'listProduct.php';
     //Start : Lay cac san pham theo danh muc
     $catId = $_GET['catid'];
@@ -13,17 +14,6 @@ session_start();
         }
     }
     //End : Lay cac san pham theo danh muc
-
-    //Start : Xu ly session gio hang
-    $totalSanpham = 0;
-    $tongSoTien = 0;
-    if(isset($_SESSION['cart']) && $_SESSION['cart'] != null) {
-        foreach($_SESSION['cart'] as $list) {
-            $totalSanpham += $list['qty'];
-            $tongSoTien   += $list['price'] * $list['qty'];
-        }
-    }
-    //End : Xu ly session gio hang
 ?>
 <!DOCTYPE html>
 <html lang="en">
