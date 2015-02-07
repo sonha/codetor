@@ -50,7 +50,10 @@ $total = 0;
                                         </div>
                                     </td>
                                     <td><?php echo number_format($sotien); ?></td>
-                                    <td><a href='deletecart.php?id=<?php echo $list['id']; ?>'>Xóa</a></td>
+                                    <td><a class="btn btn-danger" href="deletecart.php?id=<?php echo $list['id']; ?>">
+                                            <i class="icon-trash icon-large"></i> Delete
+                                        </a>
+                                    </td>
                                 </tr>
                             <?php } ?>
                                 <tr>
