@@ -90,7 +90,6 @@ require_once 'listProduct.php';
         <div class="row">
 
             <div class="col-md-3">
-                <p class="lead">Danh mục sản phẩm</p>
                 <div class="well">
                     <div class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -100,9 +99,11 @@ require_once 'listProduct.php';
                     </div>
                 </div>
                 <div class="list-group">
+                    <a href="#" class="list-group-item active">Danh mục sản phẩm</a>
                     <a href="#" class="list-group-item">Apple - iPad</a>
                     <a href="#" class="list-group-item">Samsung</a>
                     <a href="#" class="list-group-item">HTC-LG</a>
+                    <a href="#" class="list-group-item">Nokia</a>
                 </div>
             </div>
 

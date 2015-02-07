@@ -62,16 +62,15 @@ $total = 0;
 <div class="container">
     <div class="row">
         <div class="col-md-3">
-            <p class="lead">Danh mục sản phẩm</p>
-
             <div class="list-group">
+                <a href="#" class="list-group-item active">Danh mục sản phẩm</a>
                 <a href="#" class="list-group-item">Apple - iPad</a>
                 <a href="#" class="list-group-item">Samsung</a>
                 <a href="#" class="list-group-item">HTC-LG</a>
+                <a href="#" class="list-group-item">Nokia</a>
             </div>
         </div>
         <div class="col-md-9">
-            <h3>Thông tin giỏ hàng</h3>
             <?php if (isset($_SESSION['cart']) && $_SESSION['cart'] != null) { ?>
                 <form action='updatecart.php' method='POST'>
                     <div class="panel panel-info">
