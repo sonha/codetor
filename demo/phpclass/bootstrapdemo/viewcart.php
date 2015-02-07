@@ -35,10 +35,9 @@ $totalCash = 0;
                             </tr>
                             </thead>
                             <tbody>
-                            <?php foreach ($_SESSION['cart'] as $list) { ?>
-                                <?php $itemCash = $list['price'] * $list['qty'];
-                                $totalCash += $itemCash;
-                                ?>
+                            <?php foreach ($_SESSION['cart'] as $list) :
+                                $itemCash = $list['price'] * $list['qty'];
+                                $totalCash += $itemCash; ?>
                                 <tr>
                                     <td><?php echo $list['id']; ?></td>
                                     <td><?php echo $list['name']; ?></td>
@@ -56,7 +55,7 @@ $totalCash = 0;
                                         </a>
                                     </td>
                                 </tr>
-                            <?php } ?>
+                            <?php endforeach; ?>
                                 <tr>
                                     <td>Tổng tiền</td>
                                     <td></td>
