@@ -108,7 +108,6 @@ require_once 'listProduct.php';
     <!-- /.container -->
 
     <div class="container">
-        <hr>
         <!-- Footer -->
         <?php include_once '_template_footer.php';?>
     </div>
