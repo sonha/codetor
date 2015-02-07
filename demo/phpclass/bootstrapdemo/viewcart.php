@@ -95,8 +95,11 @@ $total = 0;
                                     <td><?php echo $list['id']; ?></td>
                                     <td><?php echo $list['name']; ?></td>
                                     <td><?php echo number_format($list['price']); ?></td>
-                                    <td><input type='text' name='qty[<?php echo $list['id']; ?>]'
-                                               value='<?php echo $list['qty']; ?>'/></td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" name="qty[<?php echo $list['id']; ?>]" value="<?php echo $list['qty']; ?>" class="form-control" placeholder="Nhập số lượng">
+                                        </div>
+                                    </td>
                                     <td><?php echo number_format($sotien); ?></td>
                                     <td><a href='deletecart.php?id=<?php echo $list['id']; ?>'>Xóa</a></td>
                                 </tr>
