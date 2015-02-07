@@ -82,7 +82,7 @@ require_once 'listProduct.php';
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="viewcart.php"><i class="icon-shopping-cart">(<?php echo $totalSanpham;?>)</i>Cart</a></li>
+                    <li><a href="viewcart.php"><i class="icon-shopping-cart icon-large">(<?php echo $totalSanpham;?>)</i>Cart</a></li>
                     <li><a href="#">Login</a></li>
                 </ul>
             </div>
