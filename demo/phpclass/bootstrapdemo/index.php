@@ -28,6 +28,9 @@ require_once 'listProduct.php';
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--    http://fortawesome.github.io/Font-Awesome/3.2.1/examples/-->
 
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
@@ -54,7 +57,7 @@ require_once 'listProduct.php';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Shopping Cart Demo</a>
+                <a class="navbar-brand" href="#">Cart Demo</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -78,6 +81,10 @@ require_once 'listProduct.php';
                         </ul>
                     </li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="viewcart.php"><i class="icon-shopping-cart">(<?php echo $totalSanpham;?>)</i>Cart</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -100,10 +107,10 @@ require_once 'listProduct.php';
                 </div>
                 <div class="list-group">
                     <a href="#" class="list-group-item active">Danh mục sản phẩm</a>
-                    <a href="#" class="list-group-item">Apple - iPad</a>
-                    <a href="#" class="list-group-item">Samsung</a>
-                    <a href="#" class="list-group-item">HTC-LG</a>
-                    <a href="#" class="list-group-item">Nokia</a>
+                    <a href="#" class="list-group-item"><i class="icon-laptop"></i> Apple - iPad</a>
+                    <a href="#" class="list-group-item"><i class="icon-laptop"></i>  Samsung</a>
+                    <a href="#" class="list-group-item"><i class="icon-laptop"></i>  HTC-LG</a>
+                    <a href="#" class="list-group-item"><i class="icon-laptop"></i>  Nokia</a>
                 </div>
             </div>
 
