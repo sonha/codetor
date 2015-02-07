@@ -8,8 +8,7 @@ session_start();
     if(isset($_SESSION['cart']) && $_SESSION['cart'] != null) {
         foreach($_SESSION['cart'] as $list) {
             $totalSanpham += $list['qty'];
-            $tongSoTien = $list['price'] * $list['qty'];
-            $tongSoTien += $tongSoTien;
+            $tongSoTien   += $list['price'] * $list['qty'];
         }
     }
 require_once 'listProduct.php';
@@ -25,7 +24,7 @@ require_once 'listProduct.php';
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shop Homepage - Start Bootstrap Template</title>
+    <title>Shopping Cart Demo</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +54,7 @@ require_once 'listProduct.php';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="#">Shopping Cart Demo</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
