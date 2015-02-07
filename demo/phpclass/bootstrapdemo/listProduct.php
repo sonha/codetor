@@ -53,49 +53,49 @@ $product[] = array(
 	'description' => 'Đánh giá iPhone 6: Tốt nhưng không hoàn hảo',
 );
 $product[] = array(
-    'id' => 1,
+    'id' => 5,
     'name' => 'Sony Experia Z12',
     'price' => '12000000',
     'catid' => 2,
     'description' => 'Sản phẩm dành riêng cho bà đẻ',
 );
 $product[] = array(
-    'id' => 1,
+    'id' => 6,
     'name' => 'Iphone 8',
     'price' => '12000000',
     'catid' => 1,
     'description' => 'Sản phẩm mới, xịn vđ luôn',
 );
 $product[] = array(
-    'id' => 1,
+    'id' => 7,
     'name' => 'Sony Z123',
     'price' => '12000000',
     'catid' => 2,
     'description' => 'Sản phẩm mới, xịn vđ luôn',
 );
 $product[] = array(
-    'id' => 1,
+    'id' => 8,
     'name' => 'Samsung Porn1',
     'price' => '13000000',
     'catid' => 1,
     'description' => 'Sản phẩm mới, xịn vđ luôn',
 );
 $product[] = array(
-    'id' => 1,
+    'id' => 9,
     'name' => 'Iporn New',
     'price' => '22000000',
     'catid' => 1,
     'description' => 'Sản phẩm mới, xịn vđ luôn',
 );
 $product[] = array(
-    'id' => 1,
+    'id' => 10,
     'name' => 'LGPorn 12',
     'price' => '1600000',
     'catid' => 3,
     'description' => 'Mẫu điện thoại hot nhất năm 2000',
 );
 $product[] = array(
-    'id' => 1,
+    'id' => 11,
     'name' => 'Sony Experia Z1',
     'price' => '19000000',
     'catid' => 2,

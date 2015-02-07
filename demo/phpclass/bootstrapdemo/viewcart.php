@@ -17,6 +17,7 @@ $total = 0;
 
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -74,7 +75,8 @@ $total = 0;
             <?php if (isset($_SESSION['cart']) && $_SESSION['cart'] != null) { ?>
                 <form action='updatecart.php' method='POST'>
                     <div class="panel panel-info">
-                        <div class="panel-heading">Giỏ hàng</div>
+                        <div class="panel-heading"><i class="icon-shopping-cart"></i> Giỏ hàng</div>
+                        <div class="table-responsive">
                         <table class="table table-hover">
                             <thead>
                             <tr class="active">
@@ -97,7 +99,9 @@ $total = 0;
                                     <td><?php echo number_format($list['price']); ?></td>
                                     <td>
                                         <div class="form-group">
-                                            <input type="text" name="qty[<?php echo $list['id']; ?>]" value="<?php echo $list['qty']; ?>" class="form-control" placeholder="Nhập số lượng">
+                                            <div class="col-xs-6">
+                                            <input type="text" name="qty[<?php echo $list['id']; ?>]" value="<?php echo $list['qty']; ?>" class="form-control" placeholder="Số lượng">
+                                            </div>
                                         </div>
                                     </td>
                                     <td><?php echo number_format($sotien); ?></td>
@@ -114,11 +118,20 @@ $total = 0;
                                 </tr>
                             </tbody>
                         </table>
+                        </div>
                     </div>
-                    <div class="pull-right">
-                        <a href="index.php" class="btn btn-info active" role="button">Mua tiếp</a>
-                        <input type='submit' class="btn btn-success" value='Cập nhật giỏ hàng' name='btnUpdate'/>
-                        <a href="index.php" class="btn btn-danger active" role="button">Thanh Toán</a>
+                    <div class="row">
+                        <div class="pull-right">
+                        <div class="col-xs-12 col-md-3">
+                            <a href="index.php" class="btn btn-info active" role="button">Mua tiếp</a>
+                        </div>
+                        <div class="col-xs-12 col-md-5">
+                            <input type='submit' class="btn btn-success" value='Cập nhật giỏ hàng' name='btnUpdate'/>
+                        </div>
+                        <div class="col-xs-12 col-md-2">
+                            <a href="index.php" class="btn btn-danger active" role="button">Thanh Toán</a>
+                        </div>
+                        </div>
                     </div>
                 </form>
             <?php } else { ?>
