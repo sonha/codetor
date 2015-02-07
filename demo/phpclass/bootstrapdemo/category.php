@@ -3,6 +3,18 @@
 session_start();
 ?>
 <?php
+    require_once 'listProduct.php';
+    //Start : Lay cac san pham theo danh muc
+    $catId = $_GET['catid'];
+    $listProductByCat  = array();
+    foreach($product as $item) {
+        if($item['catid'] == $catId) {
+            $listProductByCat[] = $item;
+        }
+    }
+    //End : Lay cac san pham theo danh muc
+
+    //Start : Xu ly session gio hang
     $totalSanpham = 0;
     $tongSoTien = 0;
     if(isset($_SESSION['cart']) && $_SESSION['cart'] != null) {
@@ -11,7 +23,7 @@ session_start();
             $tongSoTien   += $list['price'] * $list['qty'];
         }
     }
-require_once 'listProduct.php';
+    //End : Xu ly session gio hang
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,10 +43,8 @@ require_once 'listProduct.php';
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 <!--    http://fortawesome.github.io/Font-Awesome/3.2.1/examples/-->
-
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -147,8 +157,8 @@ require_once 'listProduct.php';
                 </div>
 
                 <div class="row">
-					
-					<?php foreach($product as $listProduct) { ?>
+					<?php if(!empty($listProductByCat)) :?>
+					<?php foreach($listProductByCat as $listProduct) : ?>
 						 <div class="col-sm-4 col-lg-4 col-md-4">
 							<div class="thumbnail">
                             <img src="http://placehold.it/320x150" alt="">
@@ -174,7 +184,14 @@ require_once 'listProduct.php';
                             </div>
                         </div>
                     </div>
-					<?php } ?>
+					<?php endforeach; ?>
+                    <?php else: ?>
+                        <div class="alert alert-warning alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong>Thông báo!</strong> Không có sản phẩm nào thuộc danh mục này.
+                            <a href="index.php" class="btn btn-info active" role="button">Quay lại</a>
+                        </div>
+                    <?php endif; ?>
                 </div>
 
             </div>
