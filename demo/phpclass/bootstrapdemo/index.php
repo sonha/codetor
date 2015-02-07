@@ -77,12 +77,7 @@ require_once 'listProduct.php';
                             <b class="caret"></b></a>
                     </div>
                 </div>
-                <div class="list-group">
-                    <a href="#" class="list-group-item active">Danh mục sản phẩm</a>
-                    <?php foreach($allCategory as $category) : ?>
-                        <a href="category.php?catid=<?php echo $category['id'];?>" class="list-group-item"><i class="icon-laptop"></i> <?php echo $category['name'];?></a>
-                    <?php endforeach;?>
-                </div>
+                <?php require_once '_template_category_sidebar.php';?>
             </div>
 
             <div class="col-md-9">

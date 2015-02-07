@@ -51,13 +51,7 @@ require_once 'listProduct.php';
 <div class="container">
     <div class="row">
         <div class="col-md-3">
-            <div class="list-group">
-                <a href="#" class="list-group-item active">Danh mục sản phẩm</a>
-                <a href="#" class="list-group-item">Apple - iPad</a>
-                <a href="#" class="list-group-item">Samsung</a>
-                <a href="#" class="list-group-item">HTC-LG</a>
-                <a href="#" class="list-group-item">Nokia</a>
-            </div>
+            <?php require_once '_template_category_sidebar.php';?>
         </div>
         <div class="col-md-9">
             <?php require_once '_template_breadcrumb.php';?>
