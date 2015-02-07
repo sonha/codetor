@@ -62,12 +62,12 @@ $total = 0;
 <div class="container">
     <div class="row">
         <div class="col-md-3">
-            <p class="lead">Shop Name</p>
+            <p class="lead">Danh mục sản phẩm</p>
 
             <div class="list-group">
-                <a href="#" class="list-group-item">Category 1</a>
-                <a href="#" class="list-group-item">Category 2</a>
-                <a href="#" class="list-group-item">Category 3</a>
+                <a href="#" class="list-group-item">Apple - iPad</a>
+                <a href="#" class="list-group-item">Samsung</a>
+                <a href="#" class="list-group-item">HTC-LG</a>
             </div>
         </div>
         <div class="col-md-9">
