@@ -158,9 +158,9 @@ require_once 'listProduct.php';
                                 </h4>
                                 <p><?php echo $listProduct['description'];?></p>
                             </div>
-                            <p style="padding-left: 100px;">
-                                <button type="button" class="btn btn-success"><a href='item.php'>View</a></button>
-                                <button type="button" class="btn btn-danger"><a href='insertcart.php?id=<?php echo $listProduct['id'];?>'>Mua ngay</a></button>
+                            <p style="padding-left: 90px;">
+                                <a href='item.php'><button type="button" class="btn btn-success">View</button></a>
+                                <a href='insertcart.php?id=<?php echo $listProduct['id'];?>'> <button type="button" class="btn btn-danger"><i class="icon-shopping-cart"></i> Mua ngay</button></a>
                             </p>
                             <div class="ratings">
                                 <p class="pull-right">18 reviews</p>
