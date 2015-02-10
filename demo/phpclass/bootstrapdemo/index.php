@@ -64,7 +64,7 @@ require_once 'listProduct.php';
                 </div>
 
                 <div class="row">
-					
+                    <?php if(isset($product)) : ?>
 					<?php foreach($product as $listProduct) { ?>
 						 <div class="col-sm-4 col-lg-4 col-md-4">
 							<div class="thumbnail">
@@ -92,6 +92,7 @@ require_once 'listProduct.php';
                         </div>
                     </div>
 					<?php } ?>
+                    <?php endif;?>
                 </div>
 
             </div>
