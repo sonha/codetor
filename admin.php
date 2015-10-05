@@ -78,14 +78,14 @@ include('header_template.php');
         <form method='post'>
                 <button type="submit" id='submit-form' class="btn btn-success">Let's Run</button>
                 <input type="text" name="file_name" value="<?php echo isset($txt_filename) ? $txt_filename : $file_name_save?>"/>
-                <select name="category_tut">
+                <select class="chosen" name="category_tut">
                     <option value="php_directory">PHP</option>
                     <option value="js_directory">Javascript</option>
                     <option value="angular_directory">AngularJS</option>
                     <option value="jquery_directory">jQuery</option>
                     <option value="css_directory">CSS</option>
                 </select>
-                <select name="file_name_load" id="" onchange="window.location.href='http://localhost/codetor/admin.php?file_name_load='+this.value">
+                <select class="chosen" name="file_name_load" id="" onchange="window.location.href='http://localhost/codetor/admin.php?file_name_load='+this.value">
                     <option value="" selected><?php echo $file_name_load;?></option>
                     <?php foreach($name_arr as $key){ ?>
                         <option value="<?php echo $key;?>"><?php echo $key;?></option>

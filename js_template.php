@@ -10,8 +10,13 @@
 <!-- load ace -->
 <!-- load ace emmet extension -->
 <script src="src/ext-emmet.js"></script>
+<script src="js/chosen/chosen.jquery.min.js"></script>
 
 <script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery(".chosen").data("placeholder","Select Frameworks...").chosen();
+    });
+
     var $ = document.getElementById.bind(document);
     var dom = require("ace/lib/dom");
 

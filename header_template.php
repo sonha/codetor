@@ -23,5 +23,7 @@ function render($view, $vars)
     <title>Codeto Editor v1.0</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet">
+    <link href="js/chosen/chosen.min.css" rel="stylesheet">
+    <link href="js/chosen/chosen-bootstrap.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 </head>
