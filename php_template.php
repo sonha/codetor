@@ -1,6 +1,6 @@
 <?php
 /**
- * TODO : Training PHP
+ * TODO : Codeto Training PHP
  * @author : SonHA (hason61vn@gmail.com)
  */
 
